@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "environment": "prelaunch",
+  "owner": "Danielle",
+  "monthly_target_usd": 25,
+  "cloud_run": {
+    "min_instances": 0,
+    "max_instances": 1,
+    "exceptional_max_instances": 3
+  },
+  "prohibit_gpu": true,
+  "prohibit_ha_database": true,
+  "prohibit_always_on_workers": true,
+  "prohibit_paid_preview_database": true,
+  "prohibit_subhour_cron": true,
+  "prohibit_vpc_connector_without_exception": true,
+  "require_retry_ceiling": true,
+  "require_cleanup_policy": true,
+  "require_emergency_kill_switch": true,
+  "approved_exceptions": []
+}
