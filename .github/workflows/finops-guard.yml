@@ -1,0 +1,21 @@
+name: FinOps Cost Guard
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cost-safety:
+    name: Cost safety gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run FinOps guard
+        run: python3 .github/finops_guard.py
